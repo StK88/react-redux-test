@@ -1,0 +1,172 @@
+$green: #2bc45e;
+$red: #ff0505;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans'
+  // background-color: #19384C;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__item {
+  color: $green;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color .3s;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.menu-item--active {
+  color: black;
+}
+
+
+.form {
+  display: flex;
+}
+
+.form__input {
+  flex: 1;
+  padding: 0 10px;
+  height: 40px;
+  border: 1px solid $green;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+  }
+}
+
+.form__button {
+  outline: none;
+  padding: 0 16px;
+  border: 1px solid $green;
+  background-color: $green;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.field-list {
+  padding: 0;
+  list-style: none;
+}
+
+.field-list__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #b2b0b0;
+
+  &:hover {
+    .field-list__remove-item {
+      visibility: visible;
+    }
+  }
+}
+
+.field-list__remove-item {
+  cursor: pointer;
+  color: $red;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: color .3s;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+.list-item {
+  cursor: pointer;
+  word-break: break-all;
+  transition: color .3s;
+
+  &.list-item--active {
+    color: $green;
+  }
+}
+
+.sorting__filter {
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    flex: 1 0 auto;
+    text-align: center;
+
+    &:first-child {
+      flex: 0 1 100%;
+      text-align: left;
+    }
+
+    &:not(:last-child) {
+    }
+  }
+
+  a {
+    color: $green;
+    text-decoration: none;
+  }
+
+  a,
+  span {
+    font-size: 14px;
+    display: block;
+    padding: 0 10px;
+  }
+
+  .link--active {
+    color: black;
+    cursor: default;
+  }
+}
+
+
+//Animation
+
+.example-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+}
+
+.example-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0;
+}
