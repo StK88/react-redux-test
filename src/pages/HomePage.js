@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router';
-import Form from '../Form';
-import Filters from '../Filters';
-import SortFieldList from '../../containers/SortFieldList';
+import Form from '../components/Form';
+import Filters from '../components/Filters';
+import SortFieldList from '../containers/SortFieldList';
 
 const HomePage = () => {
   return (
