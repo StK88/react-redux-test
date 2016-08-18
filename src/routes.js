@@ -3,8 +3,9 @@ import { Route, IndexRoute } from 'react-router';
 import App from './components/App';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import pageA from './pages/pageA';
-import pageB from './pages/pageB';
+import Contacts from './pages/Contacts';
+import LoginPage from './pages/LoginPage';
+import RegistrationPage from './pages/RegistrationPage';
 
 export default function Routes(store) {
 
@@ -12,8 +13,9 @@ export default function Routes(store) {
     <Route path="/" component={App}>
       <IndexRoute component={HomePage}/>
       <Route path="about" component={AboutPage}/>
-      <Route path="pageA" component={pageA}/>
-      <Route path="pageB" component={pageB}/>
+      <Route path="contacts" component={Contacts}/>
+      <Route path="register" component={RegistrationPage}/>
+      <Route path="login" component={LoginPage}/>
     </Route>
   )
 }
